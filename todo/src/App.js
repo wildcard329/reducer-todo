@@ -5,13 +5,13 @@ import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
 function App() {
-  const [state, dispatch] = useReducer(todoReducer, initialState)
-  const [todos, setTodos] = useState([{}]);
- 
+  const [todos, dispatch] = useReducer(todoReducer, initialState)
+  console.log(todos)
   return (
     <div className="App">
       <h1>Todos</h1>
       <TodoList todos={todos} />
+      {/* <TodoForm dispatch={dispatch} /> */}
     </div>
   );
 }
