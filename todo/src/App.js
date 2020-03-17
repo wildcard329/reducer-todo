@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>Todos</h1>
-      <TodoList todos={todos.todo} />
+      <TodoList todos={todos.todo} dispatch={dispatch} />
       <TodoForm dispatch={dispatch} />
     </div>
   );

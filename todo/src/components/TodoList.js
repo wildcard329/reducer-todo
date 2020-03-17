@@ -6,9 +6,9 @@ const TodoList = props => {
     return (
     <div className="todo-list">
         {props.todos.map(todo => (
-            <Todo key={todo.id} todo={todo} />
+            <Todo key={todo.id} todo={todo} dispatch={props.dispatch} />
         ))}
-        <button className="clear-btn">
+        <button className="clear-btn" onClick={() => props.dispatch({ type: "CLEAR_COMPLETED" })}>
             Clear Completed
         </button>
     </div>
