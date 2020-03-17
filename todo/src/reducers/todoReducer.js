@@ -1,22 +1,20 @@
-import React, {useReducer} from 'react';
-
-export const initialState = [{
-    todo: 'Learn about reducers',
-    completed: false,
-    id: Date.now()
-}]
+export const initialState = {todo: []}
 
 export const todoReducer = (state, action) => {
     switch(action.type) {
-        // case 'TOGGLE_COMPLETE':
-        //     return {
-        //         todos: state.todos.map((t, idx) =>
-        //              idx === action.idx ? { ...t, completed: !t.completed } : t)
-        //     };
-        // case 'ADD_TODO':
-        //     return {
-        //         todos: [...state.todos, { text: action.text, completed: false }]
-        //     }
+        case 'ADD_TODO':
+            return {
+                ...state,
+                todo: [...state.todo, { todo: action.todo, completed: false, id: Date.now()  }]
+            }
+        case 'TOGGLE_COMPLETE':
+            return {
+                todos: state.todos.map((todo, index) => index === action.index ? {...todo, completed: !todo.completed } : todo)
+            }
+        case 'CLEAR_COMPLETED':
+            return {
+                todos: this.state.todos.filter(todo => !todo.completed)
+            }
         default:
             return state;
     }

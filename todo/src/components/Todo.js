@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useReducer } from 'react';
+import {todoReducer} from '../reducers/todoReducer';
 
 const Todo = props => {
+    const [todos, dispatch] = useReducer(todoReducer)
     return (
         <div
-            onClick={() => props.toggleCompleted(props.todo.id)}
+            onClick={() => dispatch({ type: "TOGGLE_COMPLETE"})}
             className={`todo${props.todo.completed ? ' completed' : ''}`}>
                 <p>{props.todo.todo}</p>
             </div>

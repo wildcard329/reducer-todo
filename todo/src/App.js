@@ -1,4 +1,4 @@
-import React, {useState, useReducer} from 'react';
+import React, {useReducer} from 'react';
 import { todoReducer, initialState } from './reducers/todoReducer';
 import './App.css';
 import TodoList from './components/TodoList';
@@ -6,12 +6,12 @@ import TodoForm from './components/TodoForm';
 
 function App() {
   const [todos, dispatch] = useReducer(todoReducer, initialState)
-  console.log(todos)
+  console.log(todos,"app")
   return (
     <div className="App">
       <h1>Todos</h1>
-      <TodoList todos={todos} />
-      {/* <TodoForm dispatch={dispatch} /> */}
+      <TodoList todos={todos.todo} />
+      <TodoForm dispatch={dispatch} />
     </div>
   );
 }
