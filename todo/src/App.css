@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  text-align: left;
+  color: dodgerblue
+}
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.todo {
+  background-color: black;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+form > input {
+  background-color:  black;
+  color: dodgerblue;
+  border: 0;
+  padding: 6px 0;
+  font-size: 1rem;
+  width: 240px;
+  outline: 0;
+  border-bottom: 1px solid dodgerblue;
+  border-right: 1px solid dodgerblue;
+  margin-right: 8px;
+}
+
+button {
+  background-color: black;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  font-size: 16px;
+  padding: 6px 14px;
+}
+
+input::placeholder {
+  color: dodgerblue;
+  opacity: 1;
+}
+
+.clear-btn {
+  margin-top: 16px;
+}
