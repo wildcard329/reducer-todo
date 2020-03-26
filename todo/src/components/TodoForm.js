@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 
 const TodoForm = (props) => {
     const [todo, setTodo] = useState('');
-    console.log(props, 'form')
     return (
         <div>
             <form

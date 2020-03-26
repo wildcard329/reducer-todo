@@ -6,7 +6,6 @@ import TodoForm from './components/TodoForm';
 
 function App() {
   const [todos, dispatch] = useReducer(todoReducer, initialState)
-  console.log(todos,"app")
   return (
     <div className="App">
       <h1>Todos</h1>

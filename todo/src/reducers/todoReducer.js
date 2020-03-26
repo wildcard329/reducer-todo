@@ -1,15 +1,13 @@
 export const initialState = {todo: []}
 
-export const todoReducer = (state, action) => {
+export const todoReducer = (state =initialState, action) => {
     switch(action.type) {
         case 'ADD_TODO':
-            console.log(state, 'addtodo')
             return {
                 ...state,
                 todo: [...state.todo, { todo: action.todo, completed: false, id: Date.now()  }]
             };
         case 'TOGGLE_COMPLETE':
-            console.log(state, "togglecomp")
             return {
                 ...state,
                 todo: state.todo.map(t => {

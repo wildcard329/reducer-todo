@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+body {
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  text-align: left;
+  color: dodgerblue
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.todo {
+  background-color: black;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+form > input {
+  background-color:  black;
+  color: dodgerblue;
+  border: 0;
+  padding: 6px 0;
+  font-size: 1rem;
+  width: 240px;
+  outline: 0;
+  border-bottom: 1px solid dodgerblue;
+  border-right: 1px solid dodgerblue;
+  margin-right: 8px;
+}
+
+button {
+  background-color: black;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  font-size: 16px;
+  padding: 6px 14px;
+}
+
+input::placeholder {
+  color: dodgerblue;
+  opacity: 1;
+}
+
+.clear-btn {
+  margin-top: 16px;
 }
